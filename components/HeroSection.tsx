@@ -18,7 +18,7 @@ export default function HeroSection({ currentLang, onReserveClick }: HeroSection
       id="hero-section"
       className="relative w-full overflow-hidden bg-[#1a1a1a] text-[#f5f0e8] py-20 lg:py-28 px-4 sm:px-6 lg:px-12"
     >
-      {/* Background Image Underlay with Rich Vignette & Texture */}
+      {/* Background Image Underlay - Now Richly Visible with Flame & Ember Vibrance */}
       <div className="absolute inset-0 z-0 select-none">
         <Image
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcuNsS_d69bXiIDnmobq6OMpTQhB8w4Agdy9XwIUHPhZYvPcJM76QWLq6hgNcwQFQXXuWe94hv3bR1e1uQqkaBTw7fICTnBoJXQzAzGboUCVjk_7-glZm2T8n9k06uymLoqYjXaUpsiPzc0-13NgYmhDZRTSfFiUitSbdU_SwZ1zNQ7zH4VrYUo3sgxzJbvZeTWNMoyI8pmtge187MFwUjH-ErkoIU3mEunEXzZtlhBeLG-MVaZ_n3"
@@ -26,24 +26,26 @@ export default function HeroSection({ currentLang, onReserveClick }: HeroSection
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
+          className="object-cover object-center sm:object-[center_35%] opacity-65 filter brightness-105 contrast-115 scale-105 transition-transform duration-1000 ease-out"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/85 to-[#1a1a1a]/60"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(#ffcc00_1px,transparent_1px)] [background-size:24px_24px] opacity-10"></div>
+        {/* Soft atmospheric gradient vignettes for maximum text contrast while keeping background mouth-watering */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-[#1a1a1a]/60 to-[#1a1a1a]/45"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/85 via-[#1a1a1a]/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(#ffcc00_1px,transparent_1px)] [background-size:24px_24px] opacity-15"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-start gap-8">
         {/* Trust Chips / Badges */}
         <div className="flex flex-wrap gap-2.5 sm:gap-3 text-xs font-label uppercase tracking-widest">
-          <span className="inline-flex items-center gap-1.5 bg-[#ffcc00] text-[#1a1a1a] px-3.5 py-1.5 font-bold shadow-[2px_2px_0px_#ffffff]">
+          <span className="inline-flex items-center gap-1.5 bg-[#ffcc00] text-[#1a1a1a] px-3.5 py-1.5 font-bold shadow-[2px_2px_0px_#ffffff] border border-[#1a1a1a]">
             <Star className="w-4 h-4 fill-[#1a1a1a] text-[#1a1a1a]" />
             {t.hero.googleReviews}
           </span>
-          <span className="inline-flex items-center gap-1.5 bg-[#f5f0e8] text-[#1a1a1a] px-3.5 py-1.5 font-bold shadow-[2px_2px_0px_#ffffff]">
+          <span className="inline-flex items-center gap-1.5 bg-[#f5f0e8] text-[#1a1a1a] px-3.5 py-1.5 font-bold shadow-[2px_2px_0px_#ffffff] border border-[#1a1a1a]">
             <ShieldCheck className="w-4 h-4 text-[#e63b2e]" />
             {t.hero.halalCertified}
           </span>
-          <span className="inline-flex items-center gap-1.5 bg-[#e8e3da] text-[#1a1a1a] px-3.5 py-1.5 font-bold shadow-[2px_2px_0px_#ffffff]">
+          <span className="inline-flex items-center gap-1.5 bg-[#e8e3da] text-[#1a1a1a] px-3.5 py-1.5 font-bold shadow-[2px_2px_0px_#ffffff] border border-[#1a1a1a]">
             <Clock className="w-4 h-4 text-[#1a1a1a]" />
             {t.hero.openHours}
           </span>
@@ -51,14 +53,14 @@ export default function HeroSection({ currentLang, onReserveClick }: HeroSection
 
         {/* Main Headline */}
         <div className="space-y-4 max-w-4xl">
-          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-headline font-bold uppercase tracking-tight text-[#f5f0e8] leading-[1.08]">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-headline font-bold uppercase tracking-tight text-[#f5f0e8] leading-[1.08] drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]">
             {t.hero.titlePart1}{' '}
             <span className="bg-[#ffcc00] text-[#1a1a1a] px-2.5 py-0.5 inline-block border-2 border-[#1a1a1a] shadow-[4px_4px_0px_#ffffff]">
               {t.hero.titleHighlight}
             </span>{' '}
             {t.hero.titlePart2}
           </h1>
-          <p className="text-base sm:text-xl text-[#e8e3da] max-w-2xl font-light leading-relaxed">
+          <p className="text-base sm:text-xl text-[#f5f0e8] max-w-2xl font-normal leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)] bg-[#1a1a1a]/40 p-2 sm:p-0 backdrop-blur-[2px] sm:backdrop-blur-none border-l-2 sm:border-l-0 border-[#ffcc00]">
             {t.hero.description}
           </p>
         </div>
@@ -67,7 +69,7 @@ export default function HeroSection({ currentLang, onReserveClick }: HeroSection
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
           <button
             onClick={onReserveClick}
-            className="inline-flex items-center justify-center gap-2.5 bg-[#ffcc00] text-[#1a1a1a] border-2 border-[#1a1a1a] px-7 py-4 font-headline uppercase font-bold text-sm tracking-wider hover:bg-[#f5f0e8] hover:text-[#1a1a1a] transition-transform active:scale-95 shadow-[4px_4px_0px_#ffffff]"
+            className="inline-flex items-center justify-center gap-2.5 bg-[#ffcc00] text-[#1a1a1a] border-2 border-[#1a1a1a] px-7 py-4 font-headline uppercase font-bold text-sm tracking-wider hover:bg-[#f5f0e8] hover:text-[#1a1a1a] transition-transform active:scale-95 shadow-[4px_4px_0px_#ffffff] cursor-pointer"
           >
             <TableProperties className="w-5 h-5 text-[#1a1a1a]" />
             {t.hero.reserveInstantly}
@@ -84,7 +86,7 @@ export default function HeroSection({ currentLang, onReserveClick }: HeroSection
         </div>
 
         {/* Location Micro-bar */}
-        <div className="flex items-center gap-2.5 text-xs font-label text-[#e8e3da] pt-2">
+        <div className="flex items-center gap-2.5 text-xs font-label text-[#f5f0e8] pt-2 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
           <MapPin className="w-4 h-4 text-[#ffcc00] flex-shrink-0" />
           <span>{t.hero.address}</span>
         </div>
